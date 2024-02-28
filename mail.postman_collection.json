@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "3eca8c36-0625-433a-9dbe-78430ea95795",
+		"name": "mail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18314473"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/mail-server/v1/mail/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to\": \"test@gmail.com\",\n    \"subject\": \"test\",\n    \"text\": \"test send mail\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/mail-server/v1/mail/send"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/mail-server/v1/mail/attachment/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"attachment\": \"/${HOME}/Documents/test.pdf\",\n    \"to\": \"test@gmail.com\",\n    \"subject\": \"test\",\n    \"text\": \"test send mail\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/mail-server/v1/mail/attachment/send"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/mail-server/v1/mail/template/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to\": \"test@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/mail-server/v1/mail/template/send"
+			},
+			"response": []
+		}
+	]
+}
